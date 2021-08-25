@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+long findFactorial(int);
+
+
+int main() 
+{
+	int num;
+	scanf("%d", &num);
+	long result = findFactorial(num);
+	printf("Factorial of '%d' is: %ld", num, result);
+
+	return 0;
+}
+
+long findFactorial(int n)
+{
+	if (n > 0)
+	{
+		return  n * findFactorial(n-1);
+	}
+	else
+		return  1;
+}
